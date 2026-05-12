@@ -171,16 +171,15 @@ export default function ProductActions({
             isAdding ||
             !isValidVariant
           }
-          variant="primary"
-          className="w-full h-10"
+          className="neon-btn w-full h-12 !bg-transparent hover:!bg-brand-neon disabled:opacity-50 disabled:cursor-not-allowed"
           isLoading={isAdding}
           data-testid="add-product-button"
         >
-          {!selectedVariant && !options
-            ? "Select variant"
+          {!selectedVariant
+            ? "Select Variant"
             : !inStock || !isValidVariant
-            ? "Out of stock"
-            : "Add to cart"}
+            ? "Out of Stock"
+            : "Add to Cart"}
         </Button>
         <MobileActions
           product={product}

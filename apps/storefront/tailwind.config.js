@@ -18,8 +18,14 @@ module.exports = {
         display: "display opacity",
         visibility: "visibility",
         padding: "padding-top padding-right padding-bottom padding-left",
+        spacing: "margin, padding",
+        transform: "transform",
       },
       colors: {
+        brand: {
+          neon: "#39FF14",
+          "neon-dim": "#1a4d0b",
+        },
         grey: {
           0: "#FFFFFF",
           5: "#F9FAFB",

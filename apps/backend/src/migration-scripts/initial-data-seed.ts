@@ -77,7 +77,7 @@ export default async function initial_data_seed({
     input: {
       stores: [
         {
-          name: "Default Store",
+          name: "Circ Supply Co.",
           supported_currencies: [
             {
               currency_code: "eur",
@@ -325,13 +325,13 @@ export default async function initial_data_seed({
     input: {
       products: [
         {
-          title: "Medusa T-Shirt",
+          title: "SYSTEM Oversized Tee",
           category_ids: [
             categoryResult.find((cat) => cat.name === "Shirts")!.id,
           ],
           description:
-            "Reimagine the feeling of a classic T-shirt. With our cotton T-shirts, everyday essentials no longer have to be ordinary.",
-          handle: "t-shirt",
+            "A retro-futuristic staple. Heavyweight cotton with a structured oversized fit, featuring the signature SYSTEM schematic diagram.",
+          handle: "system-tee",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
@@ -362,144 +362,144 @@ export default async function initial_data_seed({
           variants: [
             {
               title: "S / Black",
-              sku: "SHIRT-S-BLACK",
+              sku: "SYSTEM-TEE-S-BLACK",
               options: {
                 Size: "S",
                 Color: "Black",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 45,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 50,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "S / White",
-              sku: "SHIRT-S-WHITE",
+              sku: "SYSTEM-TEE-S-WHITE",
               options: {
                 Size: "S",
                 Color: "White",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 45,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 50,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "M / Black",
-              sku: "SHIRT-M-BLACK",
+              sku: "SYSTEM-TEE-M-BLACK",
               options: {
                 Size: "M",
                 Color: "Black",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 45,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 50,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "M / White",
-              sku: "SHIRT-M-WHITE",
+              sku: "SYSTEM-TEE-M-WHITE",
               options: {
                 Size: "M",
                 Color: "White",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 45,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 50,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "L / Black",
-              sku: "SHIRT-L-BLACK",
+              sku: "SYSTEM-TEE-L-BLACK",
               options: {
                 Size: "L",
                 Color: "Black",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 45,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 50,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "L / White",
-              sku: "SHIRT-L-WHITE",
+              sku: "SYSTEM-TEE-L-WHITE",
               options: {
                 Size: "L",
                 Color: "White",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 45,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 50,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "XL / Black",
-              sku: "SHIRT-XL-BLACK",
+              sku: "SYSTEM-TEE-XL-BLACK",
               options: {
                 Size: "XL",
                 Color: "Black",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 45,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 50,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "XL / White",
-              sku: "SHIRT-XL-WHITE",
+              sku: "SYSTEM-TEE-XL-WHITE",
               options: {
                 Size: "XL",
                 Color: "White",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 45,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 50,
                   currency_code: "usd",
                 },
               ],
@@ -512,13 +512,13 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Medusa Sweatshirt",
+          title: "PROTOCOL Heavy Hoodie",
           category_ids: [
             categoryResult.find((cat) => cat.name === "Sweatshirts")!.id,
           ],
           description:
-            "Reimagine the feeling of a classic sweatshirt. With our cotton sweatshirt, everyday essentials no longer have to be ordinary.",
-          handle: "sweatshirt",
+            "A masterclass in quiet luxury. 500GSM organic cotton with dropped shoulders and a minimalist high-tech weave.",
+          handle: "protocol-hoodie",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
@@ -539,68 +539,68 @@ export default async function initial_data_seed({
           variants: [
             {
               title: "S",
-              sku: "SWEATSHIRT-S",
+              sku: "PROTOCOL-S",
               options: {
                 Size: "S",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 120,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 130,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "M",
-              sku: "SWEATSHIRT-M",
+              sku: "PROTOCOL-M",
               options: {
                 Size: "M",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 120,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 130,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "L",
-              sku: "SWEATSHIRT-L",
+              sku: "PROTOCOL-L",
               options: {
                 Size: "L",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 120,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 130,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "XL",
-              sku: "SWEATSHIRT-XL",
+              sku: "PROTOCOL-XL",
               options: {
                 Size: "XL",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 120,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 130,
                   currency_code: "usd",
                 },
               ],
@@ -613,13 +613,13 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Medusa Sweatpants",
+          title: "GRID Cargo Pants",
           category_ids: [
             categoryResult.find((cat) => cat.name === "Pants")!.id,
           ],
           description:
-            "Reimagine the feeling of classic sweatpants. With our cotton sweatpants, everyday essentials no longer have to be ordinary.",
-          handle: "sweatpants",
+            "Futuristic utility. Multi-pocket design with a tapered technical silhouette and neon-dim accents.",
+          handle: "grid-cargos",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
@@ -640,68 +640,68 @@ export default async function initial_data_seed({
           variants: [
             {
               title: "S",
-              sku: "SWEATPANTS-S",
+              sku: "GRID-S",
               options: {
                 Size: "S",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 95,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 105,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "M",
-              sku: "SWEATPANTS-M",
+              sku: "GRID-M",
               options: {
                 Size: "M",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 95,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 105,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "L",
-              sku: "SWEATPANTS-L",
+              sku: "GRID-L",
               options: {
                 Size: "L",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 95,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 105,
                   currency_code: "usd",
                 },
               ],
             },
             {
               title: "XL",
-              sku: "SWEATPANTS-XL",
+              sku: "GRID-XL",
               options: {
                 Size: "XL",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 95,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
+                  amount: 105,
                   currency_code: "usd",
                 },
               ],
@@ -714,13 +714,13 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Medusa Shorts",
+          title: "HOLOGRAPHIC Tote",
           category_ids: [
             categoryResult.find((cat) => cat.name === "Merch")!.id,
           ],
           description:
-            "Reimagine the feeling of classic shorts. With our cotton shorts, everyday essentials no longer have to be ordinary.",
-          handle: "shorts",
+            "The ultimate digital accessory. Iridescent material that shifts with the light, perfect for the modern nomad.",
+          handle: "holographic-tote",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
@@ -735,74 +735,23 @@ export default async function initial_data_seed({
           options: [
             {
               title: "Size",
-              values: ["S", "M", "L", "XL"],
+              values: ["OS"],
             },
           ],
           variants: [
             {
-              title: "S",
-              sku: "SHORTS-S",
+              title: "OS",
+              sku: "HOLO-TOTE-OS",
               options: {
-                Size: "S",
+                Size: "OS",
               },
               prices: [
                 {
-                  amount: 10,
+                  amount: 35,
                   currency_code: "eur",
                 },
                 {
-                  amount: 15,
-                  currency_code: "usd",
-                },
-              ],
-            },
-            {
-              title: "M",
-              sku: "SHORTS-M",
-              options: {
-                Size: "M",
-              },
-              prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
-              ],
-            },
-            {
-              title: "L",
-              sku: "SHORTS-L",
-              options: {
-                Size: "L",
-              },
-              prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
-              ],
-            },
-            {
-              title: "XL",
-              sku: "SHORTS-XL",
-              options: {
-                Size: "XL",
-              },
-              prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
+                  amount: 40,
                   currency_code: "usd",
                 },
               ],
