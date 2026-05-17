@@ -24,7 +24,7 @@ export default async function diagnose_products({
   products.forEach(p => {
     logger.info(`- Product: ${p.title} (ID: ${p.id}, Status: ${p.status})`);
     if (p.sales_channels && p.sales_channels.length > 0) {
-      logger.info(`  Linked Sales Channels: ${p.sales_channels.map(sc => sc.name).join(", ")}`);
+      logger.info(`  Linked Sales Channels: ${p.sales_channels?.map(sc => sc?.name).join(", ")}`);
     } else {
       logger.warn(`  WARNING: Product ${p.title} has NO linked sales channels.`);
     }
@@ -52,7 +52,7 @@ export default async function diagnose_products({
     if (key.type === "publishable") {
       logger.info(`- Publishable API Key: ${key.title} (ID: ${key.id})`);
       if (key.sales_channels && key.sales_channels.length > 0) {
-        logger.info(`  Linked Sales Channels: ${key.sales_channels.map(sc => sc.name).join(", ")}`);
+        logger.info(`  Linked Sales Channels: ${key.sales_channels?.map(sc => sc?.name).join(", ")}`);
       } else {
         logger.warn(`  WARNING: Publishable API Key ${key.title} has NO linked sales channels.`);
       }
@@ -67,7 +67,7 @@ export default async function diagnose_products({
 
   logger.info(`Found ${regions.length} regions.`);
   regions.forEach(r => {
-    logger.info(`- Region: ${r.name} (Currency: ${r.currency_code}, Countries: ${r.countries.map(c => c.iso_2).join(", ")})`);
+    logger.info(`- Region: ${r.name} (Currency: ${r.currency_code}, Countries: ${r.countries?.map(c => c?.iso_2).join(", ")})`);
   });
 
   logger.info("Diagnosis complete.");

@@ -1,19 +1,18 @@
 # Build stage
 FROM node:20-slim AS builder
 
+RUN apt-get update && apt-get install -y python3 make g++ && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /app
 
-# Copy root package files for workspace resolution
 COPY package.json package-lock.json turbo.json ./
 COPY apps/backend/package.json ./apps/backend/
 
-# Install dependencies (using --workspaces-only if needed, or just install everything)
-RUN npm ci
+RUN npm install --no-audit --no-fund
 
-# Copy backend source
 COPY apps/backend ./apps/backend
 
-# Build backend
+# Run build
 RUN npm run build --workspace=@dtc/backend
 
 # Production stage
@@ -23,20 +22,18 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-# Install medusa-cli globally to run migrations
+# Copy built standalone application from builder
+# .medusa/server contains medusa-config.js and all built assets
+COPY --from=builder /app/apps/backend/.medusa/server ./
+# Copy node_modules (we need all of them because of the monorepo structure)
+COPY --from=builder /app/node_modules ./node_modules
+
+# Install medusa-cli globally
 RUN npm install -g @medusajs/cli@2.14.2
 
-# Copy built assets and production dependencies
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/apps/backend/package.json ./apps/backend/package.json
-COPY --from=builder /app/apps/backend/.medusa/server ./apps/backend/.medusa/server
-COPY --from=builder /app/apps/backend/medusa-config.js ./apps/backend/medusa-config.js
-# Note: medusa build output is usually in .medusa/server for v2
-
-WORKDIR /app/apps/backend
-
-# Expose the default Medusa port
+# Expose port
 EXPOSE 9000
 
-# Start command: run migrations then start
+# Start command
+# Standalone build output expects to be run from its root
 CMD ["sh", "-c", "medusa db:migrate && medusa start"]

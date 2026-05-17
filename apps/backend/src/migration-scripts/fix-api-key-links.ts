@@ -33,7 +33,7 @@ export default async function fix_api_key_links({
   }
 
   const key = apiKeys[0];
-  const currentScIds = key.sales_channels.map(sc => sc.id);
+  const currentScIds: string[] = (key.sales_channels?.map(sc => sc?.id).filter(Boolean) as string[]) || [];
 
   logger.info(`API Key "${key.title}" is currently linked to ${currentScIds.length} sales channels.`);
 
