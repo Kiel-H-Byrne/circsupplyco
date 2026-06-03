@@ -26,8 +26,8 @@
     "turbo": "^2.9.12"
   },
   "workspaces": [
-    "apps/**",
-    "!apps/backend/.medusa/**"
+    "apps/backend",
+    "apps/storefront"
   ],
   "overrides": {
     "ajv": "^8.0.0"
