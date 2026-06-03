@@ -9,6 +9,7 @@
 - [x] Provision Cloud Storage (`circ-supply-co-assets`)
 - [x] Build and Push Medusa Backend Docker Image
 - [x] Deploy Medusa Backend to Cloud Run (Service: medusa-backend)
+- [x] Create first admin user via Cloud Run Job
 - [x] Configure Storefront production environment variables
 - [ ] Deploy Storefront (Next.js)
 

@@ -72,6 +72,23 @@ gcloud run deploy medusa-backend \
   --allow-unauthenticated
 ```
 
+### 5. Create Admin User (via Cloud Run Job)
+To create a new admin user in the production environment:
+```bash
+# 1. Create the job
+gcloud run jobs create admin-user-creation \
+  --image us-central1-docker.pkg.dev/circ-supply-co-backend/medusa-repo/medusa-backend:latest \
+  --region us-central1 \
+  --vpc-connector medusa-vpc-connector \
+  --service-account 807814514312-compute@developer.gserviceaccount.com \
+  --command medusa \
+  --args "user,-e,admin@example.com,-p,yourpassword" \
+  --env-vars-file env.production.yaml
+
+# 2. Execute the job
+gcloud run jobs execute admin-user-creation --region us-central1
+```
+
 ## Required Environment Variables (Cloud Run)
 
 | Variable | Description |
