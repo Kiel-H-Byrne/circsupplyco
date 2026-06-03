@@ -1,0 +1,6 @@
+{
+  "$schema": "https://vercel.com/schemas/v1/vercel.json",
+  "buildCommand": "turbo build --filter=@dtc/storefront",
+  "installCommand": "npm install",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./"
+}

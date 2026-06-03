@@ -8,6 +8,8 @@ checkEnvVariables()
 const S3_HOSTNAME = process.env.MEDUSA_CLOUD_S3_HOSTNAME
 const S3_PATHNAME = process.env.MEDUSA_CLOUD_S3_PATHNAME
 
+const path = require("path")
+
 /**
  * @type {import('next').NextConfig}
  */
@@ -53,6 +55,15 @@ const nextConfig = {
           ]
         : []),
     ],
+  },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@lib": path.resolve(__dirname, "src/lib"),
+      "@modules": path.resolve(__dirname, "src/modules"),
+      "@pages": path.resolve(__dirname, "src/pages"),
+    }
+    return config
   },
 }
 

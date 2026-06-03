@@ -11,7 +11,7 @@
 - [x] Deploy Medusa Backend to Cloud Run (Service: medusa-backend)
 - [x] Create first admin user via Cloud Run Job
 - [x] Configure Storefront production environment variables
-- [ ] Deploy Storefront (Next.js)
+- [ ] Deploy Storefront (Next.js) - *In progress: Fixed Vercel build configuration (incorrect turbo install command)*
 
 ## Phase 2: Workflow Integration
 - [ ] Set up Trigger.dev v3 for orchestration
