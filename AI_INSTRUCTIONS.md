@@ -17,3 +17,6 @@ As an AI agent (e.g., Gemini, Antigravity) working within this MedusaJS reposito
 ## 4. Architectural Adherence
 - Do not implement long-running agentic loops inside MedusaJS endpoints. Medusa should quickly acknowledge requests. Heavy orchestration belongs in Trigger.dev.
 - Respect the Human-in-the-Loop (HITL) rule: Do not write code that circumvents the Draft-status requirement for new products.
+
+## 5. Administrative Tasks
+- **Production Admin User**: If tasked with creating a new admin user in production, refer to `GCP_DEPLOYMENT.md`. Use Cloud Run Jobs with the correct VPC connector and environment variables. Do not attempt to run admin creation commands directly on the Cloud Run service instance.
