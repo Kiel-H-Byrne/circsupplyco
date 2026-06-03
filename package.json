@@ -6,8 +6,8 @@
     "node": ">=20"
   },
   "scripts": {
-    "dev": "npm -r dev",
-    "build": "npm -r build",
+    "dev": "turbo dev",
+    "build": "turbo build",
     "start": "turbo start",
     "lint": "turbo lint",
     "test": "turbo test",
